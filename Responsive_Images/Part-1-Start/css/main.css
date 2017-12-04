@@ -12,6 +12,14 @@ I've left some boilerplate below for you.
 
 */
 
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  text-shadow: 3px 3px 3px #aaa;
+  font-family: 'zocial', sans-serif;
+}
+
 article {
   margin: 0 auto;
   max-width: 50em;
@@ -29,4 +37,10 @@ h1 {
 
 img {
   max-width: 100%;
+}
+
+footer {
+  display: block;
+  border-top: medium dashed green;
+
 }
