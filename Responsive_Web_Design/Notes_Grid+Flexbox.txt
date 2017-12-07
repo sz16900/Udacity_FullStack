@@ -1,0 +1,11 @@
+- If you are adding widths to all of your flex items, you probably
+need grid.
+
+- Grid work from the container in, flexbox out.
+
+- Grid is all obout the container
+
+- When you work with content, you wan to display it (i.e: when it comes from a
+database)
+
+- Old Browsers?!: 

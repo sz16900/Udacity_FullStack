@@ -1,60 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="">
-	<title>Full-Stack Web &amp; Software Development | Boulder, Colorado</title>
-	<link rel='stylesheet' href='styles/normalize.css' type='text/css' charset='utf-8'>
-	<link rel='stylesheet' href='styles/main.css' type='text/css' charset='utf-8'>
-	<link rel='stylesheet' href='styles/responsive.css' type='text/css' charset='utf-8'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/main.css">
+  <title>Document</title>
 </head>
 <body>
-	<div class="header">
-		<div class="header-inner">
-			<input type="checkbox" id="menu-toggle">
-			<label for="menu-toggle" class="label-toggle"></label>
-			<div class="logo">
-				<p class="logo-name">Seth Zea</p>
-				<p class="logo-title">Software Developer</p>
-			</div>	
-		    <ul id="menu">
-		      <li><a href="#">Lorem</a></li>
-		      <li><a href="#">Ipsum</a></li>
-		      <li><a href="#">Serum</a></li>
-		    </ul>
-		</div>
-	</div>
-	<div class="about">
-		<div class="about-inner">
-			<h1 class="about-title">Hello World! I am a software developer from Boulder, Colorado.
-			<br>
-			Let me help you create your next, amazing product!
-			</h1>
-			<p class="large-text">I design, build, maintain and patch full-stack web applications.</p>
-			<p class="large-text">Would you like to discuss a project?</p>	
-			<p class="large-text">Let's get together for a coffee (virtual or not): <a class="link--underline" href="mailto:zea.seth@gmail.com">zea.seth@gmail.com</a></p>
-		</div>
-	</div>
-	<div class="portfolio">
-		<div class="portfolio-inner">
-			<div class="galleryItem">
-				<a href="#"><img src="..." alt="" /></a>
-				<h3>Title</h3>
-				<p>Lorem ipsum dolor sit amet...</p>
-			</div>
-			<div class="galleryItem">
-				<a href="#"><img src="..." alt="" /></a>
-				<h3>Title</h3>
-				<p>Lorem ipsum dolor sit amet...</p>
-			</div>
-			<div class="galleryItem">
-				<a href="#"><img src="..." alt="" /></a>
-				<h3>Title</h3>
-				<p>Lorem ipsum dolor sit amet...</p>
-			</div>
-		</div>
-	</div>
+    <nav class="navBar">
+      <nav class="wrapper">
+        <div class="logo">Seth</div><!-- Logo -->
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="label-toggle">&#9776;</label>
+        <ul>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Ipsum</a></li>
+          <li><a href="#">Serum</a></li>
+        </ul>
+      </nav>
+    </nav>
+  <!-- Main -->
+  <main id="main">
+
+    <!-- Section A -->
+    <!-- better to do in sections in case you move things around -->
+    <section id="section-a" class="grid">
+      <!-- this class is to span the content with grid, container to push things to the middle -->
+      <div class="content-wrap">
+        <h2 class="content-title">About</h2>
+        <div class="content-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+            quos hic illo, repudiandae esse tenetur, sequi aliquid ullam
+            ad fugit, assumenda rem corrupti beatae aperiam vel nulla?
+            Dolor, at, rem suscipit omnis necessitatibus nemo saepe error quo
+            cumque quas natus!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section B -->
+    <section id="section-b" class="grid">
+      <ul>
+        <li>
+          <div class="card">
+            <img src="images/pexels-photo.jpg" alt="">
+            <div class="card-content">
+              <h3 class="card-title">Web Development</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sequi ad unde eum quisquam expedita, beatae ea ratione sunt,
+                perspiciatis aperiam.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="images/pexels-mobile.jpeg" alt="">
+            <div class="card-content">
+              <h3 class="card-title">Mobile</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sequi ad unde eum quisquam expedita, beatae ea ratione sunt,
+                perspiciatis aperiam.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="https://static.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="">
+            <div class="card-content">
+              <h3 class="card-title">Marketing</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sequi ad unde eum quisquam expedita, beatae ea ratione sunt,
+                perspiciatis aperiam.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section C -->
+    <section id="section-c" class="grid">
+      <div class="content-wrap">
+        <h2 class="content-title">We handle all your needs</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ea accusantium, aperiam tempora, cumque exercitationem delectus praesentium. Nobis libero harum deleniti, at, voluptates, voluptatibus explicabo, consectetur aliquid fugit atque error?</p>
+      </div>
+    </section>
+
+    <!-- Section D -->
+    <section id="section-d" class="grid">
+      <div class="box">
+        <h2 class="content-title">Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis maxime ducimus nam ad similique! Error quidem earum, voluptates harum magnam!</p>
+        <p>contact@acmesolutions.test</p>
+      </div>
+      <div class="box">
+        <h2 class="content-title"></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio magnam qui, rem voluptatum, rerum quidem atque nam? Fugit temporibus nulla quisquam. Mollitia labore non numquam doloremque. Magnam expedita voluptas commodi obcaecati ipsam aperiam, similique, esse omnis hic soluta debitis! Quos.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="grid">
+    <div>Acme Responsive</div>
+    <div>Project By: <a href="https://www.github.com/sz16900">Me</a></div>
+  </footer>
 </body>
 </html>
