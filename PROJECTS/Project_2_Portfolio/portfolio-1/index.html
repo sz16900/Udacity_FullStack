@@ -1,0 +1,125 @@
+<!-- "Mobile First" approach from scratch -->
+<!-- Using CSS Grid for responive -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acme_Responsive</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="showcase" class="grid">
+    <!-- <div class="bg-image"></div> -->
+    <div class="content-wrap">
+      <p>Seth Zea &#x2192; <span class="logo-subtitle">Software Developer</class></p>
+      <!-- <h1>Seth Zea<br><span class="logo-subtitle">Software Developer</span></h1> -->
+        <!-- <a href="#section-b" class="btn">About</a> -->
+      </div>
+  </header>
+
+      <!-- Main -->
+      <main id="main">
+
+        <!-- Section A -->
+        <!-- better to do in sections in case you move things around -->
+        <section id="section-a" class="grid">
+          <!-- this class is to span the content with grid, container to push things to the middle -->
+          <div class="content-wrap">
+            <!-- <h2 class="content-title">Web & Application Development</h2> -->
+            <div class="content-text">
+              <p class="context-text-1">"Hello World!" I'm a software developer
+              from Boulder, Colorado. I can totally help you create your next
+              amazing product!</p>
+              <p class="context-text-2">I design, build, operate and sometimes even patch full-stack web
+              applications.</p>
+              <p class="context-text-3">Would you like to discuss a project? Grab some coffee?</p>
+              <p class="context-text-4">Lets talk:
+                <a href="mailto:zea.seth@gmail.com">zea.seth@gmail.com</a></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section B -->
+        <section id="section-b" class="grid">
+          <ul>
+            <li>
+              <div class="card">
+                <img src="images/pexels-photo.jpg" alt="">
+                <div class="card-content">
+                  <h3 class="card-title">Project 1</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Sequi ad unde eum quisquam expedita, beatae ea ratione sunt,
+                    perspiciatis aperiam.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="images/pexels-mobile.jpeg" alt="">
+                <div class="card-content">
+                  <h3 class="card-title">Project 2</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Sequi ad unde eum quisquam expedita, beatae ea ratione sunt,
+                    perspiciatis aperiam.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img src="https://static.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="">
+                <div class="card-content">
+                  <h3 class="card-title">Project 3</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Sequi ad unde eum quisquam expedita, beatae ea ratione sunt,
+                    perspiciatis aperiam.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section D -->
+        <section id="section-d" class="grid">
+          <div class="box-1">
+            <h2 class="content-title">Skills</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis maxime ducimus nam ad similique! Error quidem earum, voluptates harum magnam!</p>
+          </div>
+          <div class="box-2">
+            <h2 class="content-title"></h2>
+            <h3>Communication</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio magnam qui, rem voluptatum, rerum quidem atque nam? Fugit temporibus nulla quisquam. Mollitia labore non numquam doloremque. Magnam expedita voluptas commodi obcaecati ipsam aperiam, similique, esse omnis hic soluta debitis! Quos.</p>
+            <h3>Organization</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio magnam qui, rem voluptatum, rerum quidem atque nam? Fugit temporibus nulla quisquam. Mollitia labore non numquam doloremque. Magnam expedita voluptas commodi obcaecati ipsam aperiam, similique, esse omnis hic soluta debitis! Quos.</p>
+            <h3>Time Keeping</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio magnam qui, rem voluptatum, rerum quidem atque nam? Fugit temporibus nulla quisquam. Mollitia labore non numquam doloremque. Magnam expedita voluptas commodi obcaecati ipsam aperiam, similique, esse omnis hic soluta debitis! Quos.</p>
+            <h3>Project Management</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio magnam qui, rem voluptatum, rerum quidem atque nam? Fugit temporibus nulla quisquam. Mollitia labore non numquam doloremque. Magnam expedita voluptas commodi obcaecati ipsam aperiam, similique, esse omnis hic soluta debitis! Quos.</p>
+          </div>
+        </section>
+
+        <!-- Section C -->
+        <section id="section-c" class="grid">
+          <div class="content-wrap">
+            <h2 class="content-title">Hire Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ea accusantium, aperiam tempora, cumque exercitationem delectus praesentium. Nobis libero harum deleniti, at, voluptates, voluptatibus explicabo, consectetur aliquid fugit atque error?</p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer id="main-footer" class="grid">
+        <div class="box-1">
+          <h2 class="content-title">Contact</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis maxime ducimus nam ad similique! Error quidem earum, voluptates harum magnam!</p>
+        </div>
+        <div class="box-2">
+          <h2 class="content-title">Social</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis maxime ducimus nam ad similique! Error quidem earum, voluptates harum magnam!</p>
+        </div>
+      </footer>
+</body>
+</html>
