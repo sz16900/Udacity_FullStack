@@ -2,9 +2,8 @@
 
 body {
   margin: 0;
-  font-family;: Maison Nue, Arial, Helvetica, sans-serif;
+  font-family: Maison Nue, Arial, Helvetica, sans-serif;
   background: #fff;
-  color: #fff;
   font-size: 1.1em;
   line-height: 1.5;
   text-align: center;
@@ -17,10 +16,9 @@ img {
   height: auto;
 }
 
-h1, h2, h3, {
+h1, h2, h3, h4{
   color: #9e9d9d;
   margin: 0;
-  padding: 1em 0;
 }
 
 p {
@@ -55,7 +53,7 @@ a {
 #showcase {
   /*height: 35px;*/
   color: #000;
-  text-align: left;
+  text-align: center;
   border-top: 2px solid #00c7cc;
 }
 
@@ -73,6 +71,57 @@ a {
   padding: 0 1.5em;
 }
 
+.menu {
+  padding: 0 1.5em;
+}
+
+div #menu-toggle {
+  display: none;
+}
+
+div ul {
+  display: block;
+  height: 0;
+  list-style-type: none;
+  opacity: 0;
+  text-align: center;
+  transition: all 1s ease;
+  /*width: 100%;*/
+  visibility: hidden;
+}
+div li {
+  border-bottom: 2px solid #00c7cc;
+  display: block;
+  font-size: 1.5em;
+  padding: 2em 0;
+}
+div #menu-toggle:checked ~ ul {
+  opacity: 1;
+  height: 100vh;
+  visibility: visible;
+  margin: 0;
+  padding: 0;
+}
+div .label-toggle {
+  /*float: right;*/
+  width: 35px;
+  /*display: block;*/
+  font-size: 36px;
+  /*padding-top: 0.3em;*/
+  cursor: pointer;
+}
+div .wrapper {
+  display: block;
+}
+div ul a {
+  text-decoration: none;
+  transition: all .5s ease;
+  color: #333;
+}
+div ul a:hover {
+  color: #00c7cc;
+}
+
 /*Section A*/
 
 #section-a {
@@ -80,24 +129,21 @@ a {
   color: #333;
   padding-bottom: 12em;
 }
-
 .context-text-1 {
   font-size: 1.5em;
 }
-
 .context-text-2,
 .context-text-3,
 .context-text-4 {
   font-size: 1.3em;
   padding-top: 0;
 }
-/*.context-text-4 a {
-  color: #00c7cc;
-  text-decoration: none;
-}*/
 
 /*Section B*/
-
+.section-b-link {
+  float: right;
+  padding-right: 1em;
+}
 #section-b {
   padding: 2em 1em 1em;
 }
@@ -186,6 +232,32 @@ a {
   #showcase logo-subtitle {
     font-size: 1.3em;
   }
+    /*div .wrapper{
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    div ul {
+      opacity: 1;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      width: 50%;
+      visibility: visible;
+    }
+    div li {
+      display: inline-block;
+      border: 0;
+      font-size: 1.1em;
+      padding: 0;
+    }
+    div .label-toggle {
+      display: none;
+    }
+    div div ul a {
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+    }*/
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
@@ -202,6 +274,9 @@ a {
   }
 
   /*Can't you set the section b as grid and do the same instead of using flexbox?*/
+  .section-b-link {
+    float: none;
+  }
 
   .content-wrap,
   #section-b ul {
