@@ -8,29 +8,24 @@ body {
   line-height: 1.5;
   text-align: center;
 }
-
 img {
   display: block;
   /*This will contain the images in their containers*/
   width: 100%;
   height: auto;
 }
-
 h1, h2, h3, h4{
   color: #9e9d9d;
   margin: 0;
 }
-
 p {
   margin: 0;
   padding: 1em 0;
 }
-
 a {
   color: #00c7cc;
   text-decoration: none;
 }
-
 .btn {
   /*This display is better than pure block because it takes the best of both worlds!*/
   display: inline-block;
@@ -41,22 +36,18 @@ a {
   border: 1px solid #666;
   margin: .5em 0;
 }
-
 .btn:hover {
   background: #eaeaea;
   color: #333;
 }
 
-
 /*Header*/
 
 #showcase {
-  /*height: 35px;*/
   color: #000;
   text-align: center;
   border-top: 2px solid #00c7cc;
 }
-
 #showcase p {
   font-size: 1.1em;
 }
@@ -64,30 +55,25 @@ a {
   font-size: 0.9em;
   color: #9e9d9d;
 }
-
 /*This works well to add padding to the all of the wraps*/
 #showcase .content-wrap,
 #section-a .content-wrap {
   padding: 0 1.5em;
 }
-
 .menu {
   padding: 0 1.5em;
 }
-
 div #menu-toggle {
   display: none;
 }
-
 div ul {
-  display: block;
-  height: 0;
-  list-style-type: none;
-  opacity: 0;
-  text-align: center;
-  transition: all 1s ease;
-  /*width: 100%;*/
-  visibility: hidden;
+display: block;
+height: 0;
+list-style-type: none;
+opacity: 0;
+text-align: center;
+transition: all 1s ease;
+visibility: hidden;
 }
 div li {
   border-bottom: 2px solid #00c7cc;
@@ -103,12 +89,9 @@ div #menu-toggle:checked ~ ul {
   padding: 0;
 }
 div .label-toggle {
-  /*float: right;*/
-  width: 35px;
-  /*display: block;*/
-  font-size: 36px;
-  /*padding-top: 0.3em;*/
-  cursor: pointer;
+width: 35px;
+font-size: 36px;
+cursor: pointer;
 }
 div .wrapper {
   display: block;
@@ -147,19 +130,16 @@ div ul a:hover {
 #section-b {
   padding: 2em 1em 1em;
 }
-
 #section-b ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 #section-b li {
   margin-bottom: 1em;
   background: #fff;
   color: #333;
 }
-
 .card-content {
   padding: 1.5em;
 }
@@ -175,7 +155,6 @@ div ul a:hover {
   color: #333;
   padding: 2em;
 }
-
 #section-c h2 {
   color: #9e9d9d;
 }
@@ -185,14 +164,12 @@ div ul a:hover {
 #section-d p {
   color: #333;
 }
-
 #section-d .box-1,
 #section-d .box-2 {
   padding: 2em;
   color: #333;
   text-align: left;
 }
-
 #section-d .box-1 h2,
 #section-d .box-2 h3 {
   color: #9e9d9d;
@@ -206,13 +183,10 @@ div ul a:hover {
   color: #fff;
   text-align: left;
 }
-
-
 #main-footer .box-1 p,
 .box-2 p {
   color: #545454;
 }
-
 #main-footer .box-1 h3,
 .box-2 h3 {
   color: #c9c9c9;
@@ -222,84 +196,62 @@ div ul a:hover {
 /*Media Queries*/
 
 @media(min-width: 700px) {
-
-  #showcase {
-    /*height: 75px;*/
-  }
   #showcase p {
     font-size: 1.5em;
   }
   #showcase logo-subtitle {
     font-size: 1.3em;
   }
-    /*div .wrapper{
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-    }
-    div ul {
-      opacity: 1;
-      display: flex;
-      justify-content: space-between;
-      list-style-type: none;
-      width: 50%;
-      visibility: visible;
-    }
-    div li {
-      display: inline-block;
-      border: 0;
-      font-size: 1.1em;
-      padding: 0;
-    }
-    div .label-toggle {
-      display: none;
-    }
-    div div ul a {
-      padding-bottom: 1em;
-      margin-bottom: 1em;
-    }*/
+  div ul {
+    opacity: 1;
+    list-style: none;
+    margin: 0 2px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    visibility: visible;
+  }
+  div li {
+    display: inline-block;
+    border: 0;
+    font-size: 1.1em;
+    padding: 0;
+  }
+  div .label-toggle {
+    display: none;
+  }
+  div div ul a {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
   }
-
   #section-a .content-text {
-    /*columns: 2;
-    column-gap: 2em;*/
     padding: 6em 0;
   }
 
   #section-a .content-text p {
     padding-top: 0;
   }
-
-  /*Can't you set the section b as grid and do the same instead of using flexbox?*/
   .section-b-link {
     float: none;
   }
-
   .content-wrap,
   #section-b ul {
     grid-column: 2/4;
   }
-
-  .box, #main-footer div {
-    /*grid-column: span 2;*/
-  }
-
   #section-b ul {
     display: flex;
     justify-content: space-around;
   }
-
   #section-b li {
     width: 31%;
   }
-
   #section-c {
     grid-column: 2/4;
   }
-
   #section-d .box-1 {
     padding-left: 0;
     grid-column: 2/3;
@@ -314,10 +266,7 @@ div ul a:hover {
     /*padding: 2em 2em 2em 0;*/
     grid-column: 2/3;
   }
-
-    #main-footer .box-2 {
-      text-align: right;
-    }
-
-
+  #main-footer .box-2 {
+    text-align: right;
+  }
 }
