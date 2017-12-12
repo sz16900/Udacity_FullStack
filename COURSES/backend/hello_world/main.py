@@ -86,8 +86,6 @@ class MainPage(webapp2.RequestHandler):
                                         'year': self.escape_html(year)})
 
     def get(self):
-        # self.response.headers['Content-Type'] = 'text/plain'
-        # self.response.write(form)
         self.write_form()
 
     def post(self):
@@ -105,13 +103,6 @@ class MainPage(webapp2.RequestHandler):
 
         else:
             self.redirect("/thanks")
-# class TestHandler(webapp2.RequestHandler):
-#     def post(self):
-#         # q = self.request.get('q')
-#         # self.response.out.write(q)
-#
-#         self.response.headers['Content-Type'] = 'text/plain'
-#         # self.response.out.write(self.request)
 
 class ThanksHandler(webapp2.RequestHandler):
     def get(self):
