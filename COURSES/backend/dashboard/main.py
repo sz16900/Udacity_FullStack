@@ -1,8 +1,10 @@
-import os 
+import os
 import jinja2
 import webapp2
 import myrot as rot
 import myvalidation as mv
+
+from google.appengine.ext import db
 
 
 # Look for these templates in this directory
@@ -77,10 +79,36 @@ class Welcome(Handler):
 		self.render('welcome.html', username=username)
 
 
+class Art(db.Model):
+	title = db.StringProperty(required = True)
+	art = db.TextProperty(required = True)
+	created = db.DateTimeProperty(auto_now_add = True)
+
+class ASCII(Handler):
+
+	def render_ascii(self, title="", art="", error=""):
+		arts = db.GqlQuery('SELECT * FROM Art ORDER BY created DESC')
+		self.render('ascii.html', title=title, art=art, error=error, arts=arts)
+
+	def get(self):
+		self.render_ascii()
+
+	def post(self):
+		title = self.request.get("title")
+		art = self.request.get("art")
+		if title and art:
+			a = Art(title=title, art=art)
+			a.put()
+
+			self.redirect('ascii')
+		else:
+			error = "We need title and some art!"
+			self.render_ascii(title, art, error)
+
 app = webapp2.WSGIApplication([
 	('/', MainPage),
     ('/rot13', Rot_13),
     ('/signup', SignUp),
-    ('/welcome', Welcome)
+    ('/welcome', Welcome),
+	('/ascii', ASCII)
 ], debug=True)
-
