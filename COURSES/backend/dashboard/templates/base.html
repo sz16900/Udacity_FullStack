@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Template</title>
+		<title>Udacity-Projects-Dashboard</title>
 		<style type="text/css">
 
 			body {
@@ -28,16 +28,20 @@
 				margin: 20px auto;
 			}
 
-			.art + .art{
+			.art + .art,
+			.post + .post{
 				margin-top: 20px;
 			}
 
-			.art-title{
+			.art-title,
+			.post-title{
 				font-weight: bold;
 				font-size: 20px;
 			}
 
-			.art-body{
+			.art-body,
+			.post-body{
+				padding-top: 2em;
 				margin: 0;
 				font-size: 17px;
 			}
@@ -45,7 +49,8 @@
 		</style>
 	</head>
 	<body>
-		<h1 style="background-color: #ddd; color: #888; margin: 0; height: 50px">The Templates</h1>
+		<h1 style="background-color: #ddd; color: #888; margin: 0; height: 50px">
+			Udacity-Projects-Dashboard</h1>
 		{% block content%}
 		{% endblock%}
 	</body>

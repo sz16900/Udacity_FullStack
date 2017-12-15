@@ -105,10 +105,60 @@ class ASCII(Handler):
 			error = "We need title and some art!"
 			self.render_ascii(title, art, error)
 
+def blog_key(name = 'default'):
+	return db.Key.from_path('blogs', name)
+
+class Entry(db.Model):
+	title = db.StringProperty(required = True)
+	entry = db.TextProperty(required = True)
+	created = db.DateTimeProperty(auto_now_add = True)
+
+class Blog(Handler):
+
+	def render_blog(self, title="", entry="", error=""):
+		posts = Entry.all().order('-created')
+		# posts = db.GqlQuery('SELECT * FROM Entry ORDER BY created DESC LIMIT 10')
+		self.render('blog_posts.html', posts=posts)
+
+	def get(self):
+		self.render_blog()
+
+class PostPage(Handler):
+    def get(self, post_id):
+        key = db.Key.from_path('Entry', int(post_id), parent=blog_key())
+        post = db.get(key)
+
+        if not post:
+            self.error(404)
+            return
+
+        self.render("permalink.html", post = post)
+
+class BlogEntryForm(Handler):
+
+	def get(self):
+		self.render('blog_entry.html')
+
+	def post(self):
+		title = self.request.get("title")
+		entry = self.request.get("entry")
+		if title and entry:
+			a = Entry(parent = blog_key(), title=title, entry=entry)
+			a.put()
+
+			self.redirect('/blog/%s' % str(a.key().id()))
+		else:
+			error = "Title and Entry are required!"
+			self.render('blog_entry.html' ,title=title, entry=entry, error=error)
+
 app = webapp2.WSGIApplication([
 	('/', MainPage),
     ('/rot13', Rot_13),
     ('/signup', SignUp),
     ('/welcome', Welcome),
-	('/ascii', ASCII)
+	('/ascii', ASCII),
+	('/blog', Blog),
+	('/blog/entry', BlogEntryForm),
+	('/blog/([0-9]+)', PostPage),
+	# ('')
 ], debug=True)

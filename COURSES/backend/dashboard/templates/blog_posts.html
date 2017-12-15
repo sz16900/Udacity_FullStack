@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Blog Posts</h1>
+
+{% for post in posts%}
+  <div class="post">
+    <div class="post-title">{{post.title}}</div>
+    <div class="post-created">Creted on: {{post.created.strftime("%b %d, %y")}}</div>
+    <!-- <pre> preserves the whitespace and stays that way -->
+    <pre class="post-body">{{post.entry}}</pre>
+  </div>
+  <hr>
+{% endfor %}
+
+{% endblock %}
