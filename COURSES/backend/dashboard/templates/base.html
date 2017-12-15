@@ -1,57 +1,61 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Udacity-Projects-Dashboard</title>
-		<style type="text/css">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Intro to Backend Exercises</title>
+	<!-- <link type="text/css" rel="stylesheet" href="../assets/main.css"/> -->
+	<style >
+	body {
+		font-family: sans-serif;
+		width: 800px;
+		margin: 0 auto;
+		padding: 10px;
+	}
 
-			body {
-				font-family: sans-serif;
-				width: 800px;
-				margin: 0 auto;
-				padding: 10px;
-			}
+	.error{
+		color: red;
+	}
 
-			.error{
-				color: red;
-			}
+	label{
+		display: block;
+		font-size: 20px;
+	}
 
-			label{
-				display: block;
-				font-size: 20px;
-			}
+	input{type=submit}{
+		font-size: 24px;
+	}
 
-			input{type=submit}{
-				font-size: 24px;
-			}
+	hr{
+		margin: 20px auto;
+	}
 
-			hr{
-				margin: 20px auto;
-			}
+	.art + .art,
+	.post + .post{
+		margin-top: 20px;
+	}
 
-			.art + .art,
-			.post + .post{
-				margin-top: 20px;
-			}
+	.art-title,
+	.post-title{
+		font-weight: bold;
+		font-size: 20px;
+	}
 
-			.art-title,
-			.post-title{
-				font-weight: bold;
-				font-size: 20px;
-			}
+	.art-body,
+	.post-body{
+		padding-top: 2em;
+		margin: 0;
+		font-size: 17px;
+	}
 
-			.art-body,
-			.post-body{
-				padding-top: 2em;
-				margin: 0;
-				font-size: 17px;
-			}
+	</style>
 
-		</style>
-	</head>
-	<body>
-		<h1 style="background-color: #ddd; color: #888; margin: 0; height: 50px">
-			Udacity-Projects-Dashboard</h1>
-		{% block content%}
-		{% endblock%}
-	</body>
+</head>
+<body>
+	<h1 style="background-color: #ddd; color: #888; margin: 0; height: 50px">
+		Udacity-Projects-Dashboard</h1>
+	{% block content%}
+	{% endblock%}
+</body>
 </html>
