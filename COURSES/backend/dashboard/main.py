@@ -1,10 +1,16 @@
 import os
 import jinja2
 import webapp2
+import hashlib
+import hmac
 import myrot as rot
 import myvalidation as mv
 
 from google.appengine.ext import db
+
+# THIS SHOULD BE BE IN ANOTHER MODULE
+SECRET = "imsoscret"
+
 
 
 # Look for these templates in this directory
@@ -12,6 +18,22 @@ template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir),
 	autoescape = True)
 
+# HASHING STUFF AND SECURITY
+
+
+def hash_str(s):
+	# return hashlib.md5(s).hexdigest()
+	return hmac.new(SECRET, s).hexdigest()
+
+def make_secure_val(s):
+	return "%s|%s" % (s, hash_str(s))
+
+def check_secure_val(h):
+	val = h.split('|')[0]
+	if h == make_secure_val(val):
+		return val
+
+# APP STUFF
 
 def render_str(template, **kw):
 	t = jinja_env.get_template(template)
@@ -26,7 +48,23 @@ class Handler(webapp2.RequestHandler):
 
 class MainPage(Handler):
 	def get(self):
-		self.render('main.html')
+		self.response.headers['Content-Type'] = 'text/plain'
+		visits = 0
+		visit_cookie_str = self.request.cookies.get('visits')
+		if visit_cookie_str:
+			cookie_val = check_secure_val(visit_cookie_str)
+			if cookie_val:
+				visits = int(cookie_val)
+
+		visits += 1
+
+		new_cookie_val = make_secure_val(str(visits))
+
+		self.response.headers.add_header('Set-Cookie', 'visits=%s' % new_cookie_val)
+		self.write("You visited: %s times" % visits)
+
+
+		# self.render('main.html')
 
 class Rot_13(Handler):
 	def get(self):
