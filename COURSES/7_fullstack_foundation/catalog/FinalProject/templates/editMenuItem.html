@@ -1,0 +1,31 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<h1> Edit Menu Item </h1>
+
+<form action="{{url_for('restaurantEditMenuItem', restaurant_id = item.restaurant_id, menu_id = item.id )}}" method = 'POST'>
+<p>Name:</p>
+<input type='text' size='30' name='name', value="{{item.name}}">
+<p>Description:</p>
+<input type='text' size='30' name='description' value="{{item.description}}">
+<p>Price:</p>
+<input type='text' size='30' name='price' value="{{item.price}}">
+<p>Course</p>
+<!-- checked="{% if item.course == 'Desert' %} checked {% endif %}" -->
+<input type="radio" name="course" value="Apetizer" > Apetizer<br>
+<input type="radio" name="course" value="Entree" > Entree<br>
+<input type="radio" name="course" value="Desert" > Desert<br>
+<input type="radio" name="course" value="Beverage"> Beverage
+</br>
+</br>
+</br>
+</br>
+</br>
+<input type='submit' value='Edit  '>
+
+</form>
+
+</body>
+</html>
